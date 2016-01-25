@@ -1,0 +1,21 @@
+{
+  "name": "jobfinder",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "edwin-rodriguez <ing.erodriguezm@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [
+    "es6",
+    "node"
+  ],
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.2.0",
+    "angular": "~1.4.9",
+    "bootstrap": "~3.3.6",
+    "angular-resource": "~1.4.9"
+  }
+}
