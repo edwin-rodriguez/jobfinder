@@ -9,11 +9,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.14.2",
     "express": "^4.13.4",
     "jade": "^1.11.0"
   },
   "devDependencies": {
     "bower": "^1.7.2",
-    "chai": "^3.4.1"
+    "chai": "^3.4.1",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-phantomjs-launcher": "^0.2.3",
+    "mocha": "^2.3.4",
+    "phantomjs": "^2.1.1"
   }
 }
