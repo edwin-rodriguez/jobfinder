@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/server; karma start"
+    "test": "mocha test/server; karma start;"
   },
   "author": "",
   "license": "ISC",
@@ -23,6 +23,7 @@
     "karma-phantomjs-launcher": "^0.2.3",
     "mocha": "^2.3.4",
     "phantomjs": "^2.1.2",
+    "phantomjs-bin": "^1.0.1",
     "supertest": "^1.1.0"
   }
 }
