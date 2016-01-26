@@ -16,9 +16,13 @@
   "devDependencies": {
     "bower": "^1.7.2",
     "chai": "^3.4.1",
+    "karma": "^0.13.19",
+    "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^0.2.2",
+    "karma-mocha": "^0.2.1",
     "karma-phantomjs-launcher": "^0.2.3",
     "mocha": "^2.3.4",
-    "phantomjs": "^2.1.1"
+    "phantomjs": "^2.1.2",
+    "supertest": "^1.1.0"
   }
 }
