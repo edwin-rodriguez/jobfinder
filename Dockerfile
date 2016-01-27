@@ -1,19 +1,27 @@
-FROM centos:centos6
+FROM ubuntu:trusty
+MAINTAINER Edwin Rodriguez <ing.erodriguezm@gmail.com>
 
-MAINTAINER ing.erodriguezm@gmail.com
+# Setup NodeSource Official PPA
+RUN apt-get update && \
+    apt-get install -y --force-yes \
+      curl \
+      apt-transport-https \
+      lsb-release \
+      build-essential \
+      python-all
 
-# Enable EPEL for Node.js
-RUN rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+RUN curl -sL https://deb.nodesource.com/setup | bash -
+RUN apt-get update
+RUN apt-get install nodejs -y --force-yes
 
-# Install Node...
-RUN yum install -y npm
+RUN npm install -g node-gyp \
+ && npm cache clear
 
-# Copy app to /src
+RUN node-gyp configure || echo ""
+
 COPY . /src
-
-# Install app and dependencies into /src
 RUN cd /src; npm install
 
-EXPOSE 8080
+EXPOSE  3000
 
-CMD cd /src && node ./server.js
+CMD ["node", "/src/index.js"]
