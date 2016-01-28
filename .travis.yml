@@ -11,10 +11,9 @@ services:
     #enable docker service inside travis
     - docker
 
-before install:
-  - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USER" -p="$DOCKER_PASSWORD"
-
 script:
+  #login into docker
+  - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USER" -p="$DOCKER_PASSWORD"
   #export global variables
   - export REPO=edwinrodriguez/jobfinder-repo
   #build the image
