@@ -21,4 +21,4 @@ script:
   #tag the build
   - docker tag $REPO:latest $REPO:v1
   #push the image to the repository
-  - docker push $REPO
+  - docker push $REPO:latest
