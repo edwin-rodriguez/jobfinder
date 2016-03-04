@@ -1,5 +1,6 @@
-FROM ubuntu:trusty
+FROM scratch
 MAINTAINER Edwin Rodriguez <ing.erodriguezm@gmail.com>
+ADD centos-7.2.1511-docker.tar.xz /
 
 # Setup NodeSource Official PPA
 RUN apt-get update && \
